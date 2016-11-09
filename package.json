@@ -4,7 +4,7 @@
   "description": "autocomplete search bar",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tape 'src/test/**/*.js' | faucet",
     "devStart": "nodemon src/server.js"
   },
   "repository": {
@@ -18,6 +18,13 @@
   },
   "homepage": "https://github.com/a-la-node/autocomplete#readme",
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "eslint": "^3.9.1",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "faucet": "0.0.1",
+    "nodemon": "^1.11.0",
+    "tape": "^4.6.2"
   }
 }
