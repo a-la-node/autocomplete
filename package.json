@@ -1,0 +1,19 @@
+{
+  "name": "autocomplete",
+  "version": "1.0.0",
+  "description": "autocomplete search bar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-la-node/autocomplete.git"
+  },
+  "author": "Ewelina Cleo Tom Peter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-la-node/autocomplete/issues"
+  },
+  "homepage": "https://github.com/a-la-node/autocomplete#readme"
+}
