@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/a-la-node/autocomplete/issues"
   },
-  "homepage": "https://github.com/a-la-node/autocomplete#readme"
+  "homepage": "https://github.com/a-la-node/autocomplete#readme",
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.1",
+    "eslint-plugin-standard": "^2.0.1"
+  }
 }
