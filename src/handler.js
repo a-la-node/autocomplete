@@ -11,12 +11,12 @@ var handler = function(request, response){
 
 function handlerForLandingPage (request, response) {
   fs.readFile(__dirname + '/../public/index.html', function(error, data){
-  if (error){
-    console.log(error);
-  }
-  response.writeHead(200, {'content-type': 'text/html'});
-  response.end(data);
-});
+    if (error){
+      throw error;
+    }
+    response.writeHead(200, {'content-type': 'text/html'});
+    response.end(data);
+  });
 }
 
 function handlerForAllPages(request, response) {
@@ -24,7 +24,7 @@ function handlerForAllPages(request, response) {
   var fileType = url.split('.')[1];
   fs.readFile(__dirname + '/../public' + url, function(error, data){
     if (error){
-      console.log(error);
+      throw error;
     }
     response.writeHead(200, {'content-type': 'text/'+ fileType});
     response.end(data);
@@ -32,5 +32,5 @@ function handlerForAllPages(request, response) {
 }
 
 module.exports = {
-  handler : handler
+  handler: handler
 };
