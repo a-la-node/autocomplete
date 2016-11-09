@@ -5,3 +5,8 @@ test('First test here: ', function(t){
   t.pass('just testing that everything works');
   t.end();
 });
+
+test('First test here: ', function(t){
+  t.pass('just testing that everything works');
+  t.end();
+});
