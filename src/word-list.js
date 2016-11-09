@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var wordlist = fs.readFileSync('dictionary.txt', 'utf8').split('\n');
+var wordlist = fs.readFileSync(__dirname + '/dictionary.txt', 'utf8').split('\n');
 
 function match(input) {
   var regex = new RegExp('^' + input, 'i');
@@ -8,5 +8,5 @@ function match(input) {
 }
 
 module.exports = {
-  match
+  match: match
 };
