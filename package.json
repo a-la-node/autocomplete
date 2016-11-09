@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/a-la-node/autocomplete#readme",
   "devDependencies": {
+    "tape": "^4.6.2",
     "eslint": "^3.9.1",
     "eslint-config-semistandard": "^7.0.0",
     "eslint-config-standard": "^6.2.1",
