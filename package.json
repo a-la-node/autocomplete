@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/a-la-node/autocomplete/issues"
   },
-  "homepage": "https://github.com/a-la-node/autocomplete#readme"
+  "homepage": "https://github.com/a-la-node/autocomplete#readme",
+  "devDependencies": {
+    "tape": "^4.6.2"
+  }
 }
