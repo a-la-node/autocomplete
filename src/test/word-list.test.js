@@ -15,7 +15,7 @@ test('Matching function: ', function(t) {
 });
 
 test('Matching function: ', function(t) {
-  t.equal(testFuncs.smartMatch('fi')[0], 'field', 'returns "first" rather than "fi"');
+  t.equal(testFuncs.smartMatch('fi')[0], 'field', 'returns "field" rather than "fi"');
   t.end();
 });
 
