@@ -14,8 +14,8 @@ var mockPhrase = (function() {
   function sendRequest(phrase) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '/search?q=' + phrase);
-    xhr.addEventListener('load', function(data) {
-      document.getElementById('results').innerHTML = buildOptionsList(data);
+    xhr.addEventListener('load', function() {
+      document.getElementById('results').innerHTML = buildOptionsList(JSON.parse(this.responseText));
     });
     xhr.send();
   }
