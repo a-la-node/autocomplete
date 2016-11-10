@@ -15,8 +15,8 @@ test('Matching function: ', function(t) {
 });
 
 test('Matching function: ', function(t) {
-  t.deepEqual(testFuncs.smartMatch('fi')[0], 'first', 'returns "first" rather than "fi"');
-  t.end()
+  t.equal(testFuncs.smartMatch('fi')[0], 'field', 'returns "first" rather than "fi"');
+  t.end();
 });
 
 test('Validate function: ', function(t) {

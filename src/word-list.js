@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 var wordlist = fs.readFileSync(__dirname + '/dictionary.txt', 'utf8').split('\n');
-var mostCommonWordlist = fs.readFileSync(__dirname + '/1000_most_common_words.txt', 'utf8').split('\n');
+var mostCommonWordlist = fs.readFileSync(__dirname + '/1000_sorted.txt', 'utf8').split('\n');
 
 function validateInput(query) {
   return query.replace(/[^a-z]/gi, '');
@@ -16,7 +16,7 @@ function match(list, regex) {
 }
 
 function smartMatch(input){
-	var regex = makeRegExp(validateInput(input));
+  var regex = makeRegExp(validateInput(input));
   var normalList = match(wordlist, regex);
   var commonList = match(mostCommonWordlist, regex);
   return commonList.concat(normalList);
