@@ -1,5 +1,7 @@
 # autocomplete
 
+[![BuildStatus](https://travis-ci.org/a-la-node/autocomplete.svg?branch=master)](https://travis-ci.org/a-la-node/autocomplete)
+
 ## What?
 Create an autocomplete search bar
 
