@@ -1,14 +1,8 @@
 var mockPhrase = (function() {
   var input = document.getElementsByTagName('input')[0];
-  var phrase = [];
 
-  input.addEventListener('keydown', function(event) {
-    if(event.key === 'Backspace') {
-      phrase.pop();
-    } else {
-      phrase.push(event.key);
-    }
-    sendRequest(phrase.join(''));
+  input.addEventListener('input', function(event) {
+    sendRequest(event.target.value);
   });
 
   function sendRequest(phrase) {
@@ -21,11 +15,7 @@ var mockPhrase = (function() {
   }
 
   function buildOptionsList(words) {
-    var innerHTML = '';
-    words.forEach(function(word) {
-      innerHTML += '<option value="' + word +'">';
-    });
-    return innerHTML;
+    return words.map(function(word) { return '<option value="' + word + '">'; }).join('');
   }
 
   return {
