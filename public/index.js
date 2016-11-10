@@ -13,7 +13,7 @@
 
   function sendRequest(phrase) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/search?=' + phrase);
+    xhr.open('GET', '/search?q=' + phrase);
     xhr.addEventListener('load', function(data) {
       var datalist = document.getElementById('results');
       datalist.innerHTML = buildOptionsList(data);
