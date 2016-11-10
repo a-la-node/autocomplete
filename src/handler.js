@@ -27,7 +27,7 @@ function handlerForSearch (request, response) {
   var url = request.url;
   var searchTerm = url.split('?=')[1];
   console.log(searchTerm);
-  response.writeHead(301, {'location': '/'});
+  response.writeHead(200, {'content-type': 'text/plain'});
   response.end(JSON.stringify(runSmartMatch.smartMatch(searchTerm)));
 }
 
