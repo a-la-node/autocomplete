@@ -1,4 +1,4 @@
-(function() {
+var mockPhrase = (function() {
   var input = document.getElementsByTagName('input')[0];
   var phrase = [];
 
@@ -13,10 +13,9 @@
 
   function sendRequest(phrase) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/search?=' + phrase);
-    xhr.addEventListener('load', function(event) {
-      var datalist = document.getElementById('results');
-      datalist.innerHTML = buildOptionsList(JSON.parse(this.responseText));
+    xhr.open('GET', '/search?q=' + phrase);
+    xhr.addEventListener('load', function() {
+      document.getElementById('results').innerHTML = buildOptionsList(JSON.parse(this.responseText));
     });
     xhr.send();
   }
@@ -28,5 +27,9 @@
     });
     return innerHTML;
   }
+
+  return {
+    buildOptionsList : buildOptionsList
+  };
 
 })();
