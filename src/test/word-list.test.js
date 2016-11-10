@@ -2,14 +2,20 @@ var test = require('tape');
 var testFuncs = require('../word-list.js');
 
 test('Matching function: ', function(t) {
-  t.deepEqual(testFuncs.match('Zyzzogeton'), ['Zyzzogeton'], 'finds one testFuncs.match for Zyzzogeton');
+  t.deepEqual(testFuncs.smartMatch('Zyzzogeton'), ['Zyzzogeton'], 'finds one testFuncs.smartMatch for Zyzzogeton');
 
-  t.equal(testFuncs.match('abba').length, 10, 'finds ten testFuncs.matches for abba');
+  t.equal(testFuncs.smartMatch('abba').length, 10, 'finds ten testFuncs.smartMatches for abba');
 
   var expected = ['lionheart', 'lionhearted', 'lionheartedness'];
-  t.deepEqual(testFuncs.match('lionheart'), expected, 'finds three testFuncs.matches for lionheartedness');
+  t.deepEqual(testFuncs.smartMatch('lionheart'), expected, 'finds three testFuncs.smartMatches for lionheartedness');
 
-  t.deepEqual(testFuncs.match('dfkghdfgkjhdfghkjgadfjkh'), [], 'returns an empty array for nonsense input');
+  t.deepEqual(testFuncs.smartMatch('dfkghdfgkjhdfghkjgadfjkh'), [], 'returns an empty array for nonsense input');
+  
+  t.end();
+});
+
+test('Matching function: ', function(t) {
+  t.equal(testFuncs.smartMatch('fi')[0], 'field', 'returns "first" rather than "fi"');
   t.end();
 });
 
