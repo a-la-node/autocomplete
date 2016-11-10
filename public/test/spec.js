@@ -3,9 +3,6 @@ QUnit.test( "Initial test", function( assert ) {
   assert.ok( 1 == "1", "Passed!" );
 });
 
-console.log(mockPhrase.buildOptionsList);
-// console.log(mockPhrase.sendRequest);
-
 // First test here:
 QUnit.test( "test buildOptionsList function with a one word argument", function( assert ) {
   var actual = mockPhrase.buildOptionsList(['hello']);
