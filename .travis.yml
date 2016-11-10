@@ -1,5 +1,6 @@
 language: node_js
 node_js: "6"
-
-script:
+before_install:
+  - pip install --user codecov
+after_success:
   - npm run coverage
