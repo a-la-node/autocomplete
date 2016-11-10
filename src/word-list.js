@@ -7,19 +7,19 @@ function validateInput(query) {
   return query.replace(/[^a-z]/gi, '');
 }
 
-function match(input) {
-  var validatedInput = validateInput(input);
-  var regex = new RegExp('^' + validatedInput, 'i');
-  return wordlist.filter(function(word) { return regex.test(word); });
+function makeRegExp(input) {
+  return new RegExp('^' + input, 'i');
+}
+
+function match(list, regex) {
+  return list.filter(function(word) { return regex.test(word); });
 }
 
 function smartMatch(input){
-	var regex = new RegExp('^' + input, 'i');
-	var normalList = wordlist.filter(function(word) { return regex.test(word); });
-	var commonList = mostCommonWordlist.filter(function(word) { return regex.test(word); })
-	var result = commonList;
-	normalList.forEach(function(a){result.push(a)})
-	console.log(result)
+	var regex = makeRegExp(validateInput(input));
+  var normalList = match(wordlist, regex);
+  var commonList = match(mostCommonWordlist, regex);
+  return commonList.concat(normalList);
 };
 
 module.exports = {
