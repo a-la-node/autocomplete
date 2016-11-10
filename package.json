@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tape './src/test/**/*.js' | faucet",
-    "devStart": "nodemon src/server.js"
+    "devStart": "nodemon src/server.js",
+    "coverage": "./node_modules/.bin/istanbul cover src/test/*.js"
   },
   "repository": {
     "type": "git",
