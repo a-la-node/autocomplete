@@ -1,11 +1,12 @@
 var fs = require('fs');
+var runSmartMatch = require('./word-list');
 
 var handler = function(request, response){
   var url = request.url;
   if (url === '/'){
     handlerForLandingPage(request, response);
     return 'handlerForLandingPage has been called';
-  } else if ( (/search?=/).test(url) ) {
+  } else if ( (/search/).test(url) ) {
     handlerForSearch(request, response);
   } else {
     handlerForAllPages(request, response);
@@ -26,7 +27,8 @@ function handlerForSearch (request, response) {
   var url = request.url;
   var searchTerm = url.split('?=')[1];
   console.log(searchTerm);
-
+  response.writeHead(301, {'location': '/'});
+  response.end(JSON.stringify(runSmartMatch.smartMatch(searchTerm)));
 }
 
 function handlerForAllPages(request, response) {

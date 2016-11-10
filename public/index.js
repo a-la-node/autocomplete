@@ -16,7 +16,7 @@
     xhr.open('GET', '/search?=' + phrase);
     xhr.addEventListener('load', function(data) {
       var datalist = document.getElementById('results');
-      datalist.innerHTML = buildOptionsList(data);
+      datalist.innerHTML = buildOptionsList(JSON.parse(data));
     });
     xhr.send();
   }
