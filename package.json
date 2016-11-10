@@ -6,7 +6,8 @@
   "scripts": {
     "test": "tape './src/test/**/*.js' | faucet",
     "devStart": "nodemon src/server.js",
-    "coverage": "./node_modules/.bin/istanbul cover src/test/*.js"
+    "coverage": "./node_modules/.bin/istanbul cover src/test/*.js",
+    "codecov": "./node_modules/.bin/codecov -t 4b1d3c65-2e58-462d-9d23-70fdd89a7255"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/a-la-node/autocomplete#readme",
   "devDependencies": {
+    "codecov": "^1.0.1",
     "eslint": "^3.9.1",
     "eslint-config-semistandard": "^7.0.0",
     "eslint-config-standard": "^6.2.1",
