@@ -26,9 +26,8 @@ function handlerForLandingPage (request, response) {
 function handlerForSearch (request, response) {
   var url = request.url;
   var searchTerm = url.split('?=')[1];
-  console.log(searchTerm);
-  response.writeHead(301, {'location': '/'});
-  response.end(JSON.stringify(runSmartMatch.smartMatch(searchTerm)));
+  response.writeHead(200, {'content-type': 'text/plain'});
+  response.end(JSON.stringify(runSmartMatch.smartMatch(searchTerm).slice(0, 10)));
 }
 
 function handlerForAllPages(request, response) {

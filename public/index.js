@@ -14,9 +14,9 @@
   function sendRequest(phrase) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '/search?=' + phrase);
-    xhr.addEventListener('load', function(data) {
+    xhr.addEventListener('load', function(event) {
       var datalist = document.getElementById('results');
-      datalist.innerHTML = buildOptionsList(JSON.parse(data));
+      datalist.innerHTML = buildOptionsList(JSON.parse(this.responseText));
     });
     xhr.send();
   }
