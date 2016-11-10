@@ -25,22 +25,16 @@ To practice node and writing back-end things.
 - Set up Continuous integration with Travis, and code coverage using Codecov and istanbul.
 - Look at categorising words ie. trousers in Menswear
 
-### Folder Structure
-public {<br>
-  index.html<br>
-  style.css<br>
-  index.js<br>
-  test {<br>
-    test.html<br>
-    spec.js<br>
-  }<br>
-}<br>
-src{<br>
-  server.js<br>
-  dictionary.txt<br>
-  wordlist.js<br>
-  handler.js<br>
-  test{<br>
-    test.js<br>
-  }<br>
-}<br>
+## Setup
+- To run the server:
+```
+npm run devStart
+```
+- To run tests:
+```
+npm test
+```
+- To check code coverage run:
+```
+npm run coverage
+```
