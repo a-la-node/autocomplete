@@ -1,4 +1,4 @@
-(function() {
+var mockPhrase = (function() {
   var input = document.getElementsByTagName('input')[0];
   var phrase = [];
 
@@ -27,6 +27,10 @@
       innerHTML += '<option value="' + word +'">';
     });
     return innerHTML;
+  }
+
+  return {
+    buildOptionsList : buildOptionsList
   }
 
 })();
