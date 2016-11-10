@@ -3,7 +3,6 @@ QUnit.test( "Initial test", function( assert ) {
   assert.ok( 1 == "1", "Passed!" );
 });
 
-// First test here:
 QUnit.test( "test buildOptionsList function with a one word argument", function( assert ) {
   var actual = mockPhrase.buildOptionsList(['hello']);
   assert.equal(actual, '<option value="hello">', "buildOptionsList is returning an option tag with 1 word" );
