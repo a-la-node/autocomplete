@@ -4,7 +4,7 @@
   "description": "autocomplete search bar",
   "main": "index.js",
   "scripts": {
-    "test": "tape 'src/test/**/*.js' | faucet",
+    "test": "tape './src/test/**/*.js' | faucet",
     "devStart": "nodemon src/server.js"
   },
   "repository": {
@@ -24,7 +24,9 @@
     "eslint-plugin-promise": "^3.3.1",
     "eslint-plugin-standard": "^2.0.1",
     "faucet": "0.0.1",
+    "istanbul": "^0.4.5",
     "nodemon": "^1.11.0",
+    "shot": "^3.3.2",
     "tape": "^4.6.2"
   }
 }
