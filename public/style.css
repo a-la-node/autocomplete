@@ -1,9 +1,25 @@
 body {
-  background-color: red;
+  font-family: 'Prociono', serif;
+  background-image: url("assets/background.jpeg");
+  background-size: 100%;
+  background-color: #787878;
+  max-width: 100%;
+  background-blend-mode: screen;
+}
+
+/* For width 400px and smaller: */
+@media only screen and (min-width: 500px) {
+    body {
+        background-color: red;
+    }
 }
 
 input {
   width: 230px;
+}
+
+h1 {
+  margin-bottom: 10px;
 }
 
 .container {
