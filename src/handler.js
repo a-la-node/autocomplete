@@ -4,6 +4,7 @@ var handler = function(request, response){
   var url = request.url;
   if (url === '/'){
     handlerForLandingPage(request, response);
+    return 'handlerForLandingPage has been called';
   } else {
     handlerForAllPages(request, response);
   }
