@@ -5,6 +5,8 @@ var handler = function(request, response){
   if (url === '/'){
     handlerForLandingPage(request, response);
     return 'handlerForLandingPage has been called';
+  } else if ( (/search?=/).test(url) ) {
+    handlerForSearch(request, response);
   } else {
     handlerForAllPages(request, response);
   }
@@ -18,6 +20,13 @@ function handlerForLandingPage (request, response) {
     response.writeHead(200, {'content-type': 'text/html'});
     response.end(data);
   });
+}
+
+function handlerForSearch (request, response) {
+  var url = request.url;
+  var searchTerm = url.split('?=')[1];
+  console.log(searchTerm);
+
 }
 
 function handlerForAllPages(request, response) {
