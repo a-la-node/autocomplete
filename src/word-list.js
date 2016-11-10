@@ -20,7 +20,7 @@ function smartMatch(input){
   var normalList = match(wordlist, regex);
   var commonList = match(mostCommonWordlist, regex);
   return commonList.concat(normalList);
-}
+};
 
 module.exports = {
   match: match,
