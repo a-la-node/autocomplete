@@ -15,8 +15,7 @@
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '/search?q=' + phrase);
     xhr.addEventListener('load', function(data) {
-      var datalist = document.getElementById('results');
-      datalist.innerHTML = buildOptionsList(data);
+      document.getElementById('results').innerHTML = buildOptionsList(data);
     });
     xhr.send();
   }
@@ -28,5 +27,9 @@
     });
     return innerHTML;
   }
+
+  return {
+    buildOptionsList : buildOptionsList
+  };
 
 })();
