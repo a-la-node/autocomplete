@@ -10,8 +10,7 @@ body {
 }
 
 .search-bar {
-  display: block;
-  width: 100%;
+  width: 90%;
   margin: auto;
   font-size: 1rem;
   font-family: inherit;
@@ -28,7 +27,7 @@ body {
 }
 
 .main-title {
-  margin-bottom: 0px;
+  margin-bottom: 0.5rem;
 }
 
 .item:first-child {
@@ -57,10 +56,19 @@ body {
 }
 
 .container {
-  padding-top: 10rem;
-  font-size: 50px;
+  padding-top: 7rem;
   text-align: center;
   width: 100%;
   max-width: 600px;
   margin:auto;
+}
+
+@media (min-width: 768px){
+/* For tablet: */
+
+}
+
+@media (min-width: 1024px){
+/* For desktop: */
+
 }
