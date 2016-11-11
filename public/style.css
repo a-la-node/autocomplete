@@ -9,26 +9,25 @@ body {
   background-blend-mode: screen;
 }
 
-.searchBar {
-  display: block;
-  width: 100%;
+.search-bar {
+  width: 90%;
   margin: auto;
-  font-size: 0.35em;
+  font-size: 1rem;
   font-family: inherit;
   padding: 0.5rem 0.5rem;
   border-style: none;
 }
 
-.searchBar::-webkit-calendar-picker-indicator {
+.search-bar::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-.searchBar:focus {
+.search-bar:focus {
   outline:none;
 }
 
-.mainTitle {
-  margin-bottom: 0px;
+.main-title {
+  margin-bottom: 0.5rem;
 }
 
 .item:first-child {
@@ -37,6 +36,10 @@ body {
 
 .item {
   padding-left: 1rem;
+}
+
+.item:hover {
+  background-color: #F5989E;
 }
 
 .option-list {
@@ -53,9 +56,19 @@ body {
 }
 
 .container {
-  font-size: 50px;
+  padding-top: 7rem;
   text-align: center;
   width: 100%;
   max-width: 600px;
   margin:auto;
+}
+
+@media (min-width: 768px){
+/* For tablet: */
+
+}
+
+@media (min-width: 1024px){
+/* For desktop: */
+
 }
