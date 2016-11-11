@@ -23,7 +23,7 @@ var mockPhrase = (function() {
   function buildOptionsList(words) {
     var innerHTML = '';
     words.forEach(function(word) {
-      innerHTML += '<option value="' + word +'">';
+      innerHTML += '<li>' + word +'</li>';
     });
     return innerHTML;
   }
