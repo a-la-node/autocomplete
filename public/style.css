@@ -39,7 +39,7 @@
 }
 
 .bold-letter {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .option-list {
@@ -49,6 +49,7 @@
   list-style: none;
   cursor: pointer;
   background-color: white;
+  font-weight: 100;
   text-align: left;
   line-height: 1.8rem;
   display: block;
