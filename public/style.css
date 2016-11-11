@@ -14,9 +14,12 @@ body {
 }
 
 .searchBar {
-  width: 44%;
+  display: block;
+  width: 100%;
   margin: auto;
-  font-size: 0.53em;
+  font-size: 0.35em;
+  font-family: inherit;
+  padding: 0.5rem 0.5rem;
   border-style: none;
 }
 
@@ -32,30 +35,31 @@ body {
   margin-bottom: 0px;
 }
 
+.item:first-child {
+  border-top: 0.18rem solid grey;
+}
+
+.item {
+  padding-left: 1rem;
+}
+
 .option-list {
   position: relative;
-  top: -0.2rem;
-  border-top: 0.18rem solid grey;
   font-size: 1rem;
   list-style: none;
   cursor: pointer;
   background-color: white;
   text-align: left;
   line-height: 1.8rem;
-  padding-left: 0.8rem;
-  width: 43.2%;
+  display: block;
+  padding-left: 0;
   margin: auto;
 }
-
-/*.form {
-  display: block;
-  margin:0px;
-  padding:0px;
-  border:0px;
-}*/
 
 .container {
   font-size: 50px;
   text-align: center;
+  width: 100%;
+  max-width: 600px;
   margin:auto;
 }
