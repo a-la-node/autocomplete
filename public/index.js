@@ -17,7 +17,7 @@ var mockPhrase = (function() {
   function buildOptionsList(words) {
     var innerHTML = '';
     words.forEach(function(word) {
-      innerHTML += '<li>' + word +'</li>';
+      innerHTML += '<li class="item">' + word +'</li>';
     });
     return innerHTML;
   }
