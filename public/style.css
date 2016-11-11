@@ -14,7 +14,8 @@ body {
 }
 
 .searchBar {
-  width: 90%;
+  width: 44%;
+  margin: auto;
   font-size: 0.53em;
   border-style: none;
 }
@@ -31,11 +32,30 @@ body {
   margin-bottom: 0px;
 }
 
+.option-list {
+  position: relative;
+  top: -0.2rem;
+  border-top: 0.18rem solid grey;
+  font-size: 1rem;
+  list-style: none;
+  cursor: pointer;
+  background-color: white;
+  text-align: left;
+  line-height: 1.8rem;
+  padding-left: 0.8rem;
+  width: 43.2%;
+  margin: auto;
+}
+
+/*.form {
+  display: block;
+  margin:0px;
+  padding:0px;
+  border:0px;
+}*/
+
 .container {
   font-size: 50px;
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
+  margin:auto;
 }

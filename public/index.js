@@ -15,7 +15,11 @@ var mockPhrase = (function() {
   }
 
   function buildOptionsList(words) {
-    return words.map(function(word) { return '<option value="' + word + '">'; }).join('');
+    var innerHTML = '';
+    words.forEach(function(word) {
+      innerHTML += '<li>' + word +'</li>';
+    });
+    return innerHTML;
   }
 
   return {
