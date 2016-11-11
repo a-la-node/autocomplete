@@ -1,4 +1,4 @@
-body {
+.main-background {
   font-family: 'Prociono', serif;
   background-image: url("assets/background.jpeg");
   background-position: center center;
@@ -16,10 +16,6 @@ body {
   font-family: inherit;
   padding: 0.5rem 0.5rem;
   border-style: none;
-}
-
-.search-bar::-webkit-calendar-picker-indicator {
-  display: none;
 }
 
 .search-bar:focus {
@@ -40,6 +36,10 @@ body {
 
 .item:hover {
   background-color: #F5989E;
+}
+
+.bold-letter {
+  font-weight: bold;
 }
 
 .option-list {
