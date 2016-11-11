@@ -1,6 +1,5 @@
-var mockPhrase = (function() {
+var wordFinder = (function() {
   var input = document.getElementsByTagName('input')[0];
-
   input.addEventListener('input', function(event) {
     sendRequest(event.target.value);
   });
@@ -15,12 +14,8 @@ var mockPhrase = (function() {
   }
 
   function buildOptionsList(words) {
-    var options = '';
-    words.forEach(function(word) {
-      options += '<li class="item">' + word +'</li>';
-    });
     displayOptionsList();
-    return options;
+    return words.map(function(word) { return '<li class="item">' + word +'</li>';} ).join('');
   }
 
   function displayOptionsList(){
@@ -33,7 +28,8 @@ var mockPhrase = (function() {
   }
 
   return {
-    buildOptionsList : buildOptionsList
+    buildOptionsList : buildOptionsList,
+    displayOptionsList : displayOptionsList
   };
 
 })();
