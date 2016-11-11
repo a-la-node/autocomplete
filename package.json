@@ -20,6 +20,9 @@
     "url": "https://github.com/a-la-node/autocomplete/issues"
   },
   "homepage": "https://github.com/a-la-node/autocomplete#readme",
+  "dependencies": {
+    "nodemon": "^1.11.0"
+  },
   "devDependencies": {
     "codecov": "^1.0.1",
     "eslint": "^3.9.1",
@@ -29,7 +32,6 @@
     "eslint-plugin-standard": "^2.0.1",
     "faucet": "0.0.1",
     "istanbul": "^0.4.5",
-    "nodemon": "^1.11.0",
     "shot": "^3.3.2",
     "tape": "^4.6.2"
   }
