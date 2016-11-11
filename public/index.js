@@ -17,7 +17,16 @@ var mockPhrase = (function() {
   function buildOptionsList(words) {
     var options = '';
     words.forEach(function(word) {
-      options += '<li class="item">' + word +'</li>';
+      var result = '';
+      word.split('').filter(function (letter){
+        if( new RegExp(letter).test(input.value)) {
+          result += '<span>' + letter +'</span>';
+        } else {
+          result += '<span class="bold-letter">' + letter +'</span>';
+        }
+      });
+      options += '<li class="item">' + result +'</li>';
+      return options;
     });
     displayOptionsList();
     return options;
