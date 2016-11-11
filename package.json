@@ -4,7 +4,7 @@
   "description": "autocomplete search bar",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "nodemon src/server.js",
     "test": "tape './src/test/**/*.js' | faucet",
     "devStart": "nodemon src/server.js",
     "coverage": "./node_modules/.bin/istanbul cover src/test/*.js && ./node_modules/.bin/codecov -t 4b1d3c65-2e58-462d-9d23-70fdd89a7255",
