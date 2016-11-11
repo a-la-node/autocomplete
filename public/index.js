@@ -15,11 +15,21 @@ var mockPhrase = (function() {
   }
 
   function buildOptionsList(words) {
-    var innerHTML = '';
+    var options = '';
     words.forEach(function(word) {
-      innerHTML += '<li class="item">' + word +'</li>';
+      options += '<li class="item">' + word +'</li>';
     });
-    return innerHTML;
+    displayOptionsList();
+    return options;
+  }
+
+  function displayOptionsList(){
+    var optionsDisplay = document.getElementById('results');
+    if (input.value === ''){
+      optionsDisplay.style.display = 'none';
+    } else {
+      optionsDisplay.style.display = 'block';
+    }
   }
 
   return {
