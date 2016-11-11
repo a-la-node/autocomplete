@@ -18,15 +18,11 @@ var mockPhrase = (function() {
     var options = '';
     words.forEach(function(word) {
       var result = '';
-      word.split('').filter(function (letter){
-        if( new RegExp(letter).test(input.value)) {
-          result += '<span>' + letter +'</span>';
-        } else {
-          result += '<span class="bold-letter">' + letter +'</span>';
-        }
-      });
+      result += '<span>'+ input.value + '</span>';
+      if (word.split(input.value)[1] !== undefined ) {
+        result += '<span class="bold-letter">'+ word.split(input.value)[1]+'</span>';
+      }
       options += '<li class="item">' + result +'</li>';
-      return options;
     });
     displayOptionsList();
     return options;
