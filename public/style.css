@@ -9,25 +9,25 @@ body {
   background-blend-mode: screen;
 }
 
-.searchBar {
+.search-bar {
   display: block;
   width: 100%;
   margin: auto;
-  font-size: 0.35em;
+  font-size: 1rem;
   font-family: inherit;
   padding: 0.5rem 0.5rem;
   border-style: none;
 }
 
-.searchBar::-webkit-calendar-picker-indicator {
+.search-bar::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-.searchBar:focus {
+.search-bar:focus {
   outline:none;
 }
 
-.mainTitle {
+.main-title {
   margin-bottom: 0px;
 }
 
@@ -37,6 +37,10 @@ body {
 
 .item {
   padding-left: 1rem;
+}
+
+.item:hover {
+  background-color: #F5989E;
 }
 
 .option-list {
@@ -53,6 +57,7 @@ body {
 }
 
 .container {
+  padding-top: 10rem;
   font-size: 50px;
   text-align: center;
   width: 100%;
