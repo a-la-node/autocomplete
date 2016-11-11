@@ -13,13 +13,21 @@ body {
     }
 }
 
-input {
+.searchBar {
   width: 90%;
   font-size: 0.53em;
   border-style: none;
 }
 
-h1 {
+.searchBar::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.searchBar:focus {
+  outline:none;
+}
+
+.mainTitle {
   margin-bottom: 0px;
 }
 
@@ -30,12 +38,4 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-input::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-input:focus {
-  outline:none;
 }
