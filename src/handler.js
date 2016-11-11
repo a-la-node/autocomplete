@@ -10,6 +10,7 @@ var handler = function(request, response){
     handlerForSearch(request, response);
   } else {
     handlerForAllPages(request, response);
+    return 'handlerForAllPages has been called';
   }
 };
 

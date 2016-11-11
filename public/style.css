@@ -1,10 +1,9 @@
 body {
   font-family: 'Prociono', serif;
   background-image: url("assets/background.jpeg");
-  background-size: 100%;
-  background-color: #787878;
-  max-width: 100%;
+  background-color: red;
   background-blend-mode: screen;
+  background-size: cover;
 }
 
 /* For width 400px and smaller: */
@@ -14,31 +13,49 @@ body {
     }
 }
 
-input {
-  width: 230px;
+.searchBar {
+  width: 44%;
+  margin: auto;
+  font-size: 0.53em;
+  border-style: none;
 }
 
-h1 {
-  margin-bottom: 10px;
+.searchBar::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.searchBar:focus {
+  outline:none;
+}
+
+.mainTitle {
+  margin-bottom: 0px;
 }
 
 .option-list {
+  position: relative;
+  top: -0.2rem;
+  border-top: 0.18rem solid grey;
+  font-size: 1rem;
   list-style: none;
   cursor: pointer;
   background-color: white;
   text-align: left;
   line-height: 1.8rem;
   padding-left: 0.8rem;
+  width: 43.2%;
+  margin: auto;
 }
+
+/*.form {
+  display: block;
+  margin:0px;
+  padding:0px;
+  border:0px;
+}*/
 
 .container {
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 50px;
   text-align: center;
-}
-
-input::-webkit-calendar-picker-indicator {
-  display: none;
+  margin:auto;
 }

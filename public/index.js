@@ -1,14 +1,8 @@
 var mockPhrase = (function() {
   var input = document.getElementsByTagName('input')[0];
-  var phrase = [];
 
-  input.addEventListener('keydown', function(event) {
-    if(event.key === 'Backspace') {
-      phrase.pop();
-    } else {
-      phrase.push(event.key);
-    }
-    sendRequest(phrase.join(''));
+  input.addEventListener('input', function(event) {
+    sendRequest(event.target.value);
   });
 
   function sendRequest(phrase) {

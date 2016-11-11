@@ -6,7 +6,12 @@ var mockResponse = {
   end : function(){}
 };
 
-test('Test if inputting http://localhost:4000/ calls handlerForLandingPage function', function(t){
+test('Test if inputting / calls handlerForLandingPage function', function(t) {
   t.equal(handler({url:'/'}, mockResponse), 'handlerForLandingPage has been called');
+  t.end();
+});
+
+test('Test that inputting /style.css calls handlerForAllPages function', function(t) {
+  t.equal(handler({url:'/style.css'}, mockResponse), 'handlerForAllPages has been called');
   t.end();
 });
