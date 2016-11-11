@@ -6,8 +6,10 @@ var handler = function(request, response){
   if (url === '/'){
     handlerForLandingPage(request, response);
     return 'handlerForLandingPage has been called';
-  } else if ( (/search/).test(url) ) {
+  } else if(/search/.test(url)) {
     handlerForSearch(request, response);
+  } else if(/test/.test(url)) {
+    handleTest(request, response);
   } else {
     handlerForAllPages(request, response);
     return 'handlerForAllPages has been called';
@@ -20,6 +22,16 @@ function handlerForLandingPage (request, response) {
       throw error;
     }
     response.writeHead(200, {'content-type': 'text/html'});
+    response.end(data);
+  });
+}
+
+function handleTest (request, response) {
+  var path = request.url.split('?')[0];
+  if(path === '/test') { path += '/test.html'; }
+  fs.readFile(__dirname + '/../public' + path, function(error, data) {
+    if(error) { throw new Error(error); }
+    response.writeHead(200, {'content-type': 'text/html' });
     response.end(data);
   });
 }

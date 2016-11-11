@@ -1,6 +1,6 @@
-var mockPhrase = (function() {
+var wordFinder = (function() {
+  'use strict';
   var input = document.getElementsByTagName('input')[0];
-
   input.addEventListener('input', function(event) {
     sendRequest(event.target.value);
   });
@@ -38,7 +38,8 @@ var mockPhrase = (function() {
   }
 
   return {
-    buildOptionsList : buildOptionsList
+    buildOptionsList : buildOptionsList,
+    displayOptionsList : displayOptionsList
   };
 
 })();
