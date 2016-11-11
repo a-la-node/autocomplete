@@ -3,6 +3,8 @@
 [![BuildStatus](https://travis-ci.org/a-la-node/autocomplete.svg?branch=master)](https://travis-ci.org/a-la-node/autocomplete)
 [![codecov](https://codecov.io/gh/a-la-node/autocomplete/branch/master/graph/badge.svg)](https://codecov.io/gh/a-la-node/autocomplete)
 
+Our autocomplete tool can be found on Heroku [here!](https://autocorrecter.herokuapp.com/)
+
 ## What?
 Create an autocomplete search bar
 
