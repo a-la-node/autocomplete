@@ -9,22 +9,23 @@ var wordFinder = (function() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '/search?q=' + phrase);
     xhr.addEventListener('load', function() {
-      document.getElementById('results').innerHTML = buildOptionsList(JSON.parse(this.responseText));
+      document.getElementById('results').innerHTML = buildOptionsList(JSON.parse(this.responseText), phrase);
+      displayOptionsList();
     });
     xhr.send();
   }
 
-  function buildOptionsList(words) {
+  function buildOptionsList(words, phrase) {
     var options = '';
     words.forEach(function(word) {
       var result = '';
-      result += '<span>'+ input.value + '</span>';
-      if (word.split(input.value)[1] !== undefined ) {
-        result += '<span class="bold-letter">'+ word.split(input.value)[1]+'</span>';
+      result += '<span>'+ phrase + '</span>';
+      var ending = word.toLowerCase().split(phrase.toLowerCase())[1];
+      if(ending && ending.length) {
+        result += '<span class="bold-letter">'+ ending +'</span>';
       }
       options += '<li class="item">' + result +'</li>';
     });
-    displayOptionsList();
     return options;
   }
 
