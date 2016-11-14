@@ -44,8 +44,10 @@ function handlerForSearch (request, response) {
 
 function handlerForAllPages(request, response) {
   var url = request.url;
+  console.log(url);
   var fileType = url.split('.')[1];
   fs.readFile(__dirname + '/../public' + url, function(error, data){
+    console.log(__dirname + '/../public' + url, 'dirname');
     if (error){
       throw error;
     }

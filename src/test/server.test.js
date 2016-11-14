@@ -12,6 +12,6 @@ test('Test if inputting / calls handlerForLandingPage function', function(t) {
 });
 
 test('Test that inputting /style.css calls handlerForAllPages function', function(t) {
-  t.equal(handler({url:'/style.css'}, mockResponse), 'handlerForAllPages has been called');
+  t.equal(handler({url:'/styles/style.css'}, mockResponse), 'handlerForAllPages has been called');
   t.end();
 });
