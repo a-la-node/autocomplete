@@ -4,13 +4,15 @@ QUnit.test( "Initial test", function( assert ) {
 });
 
 QUnit.test( "test buildOptionsList function with a one word argument", function( assert ) {
-  var actual = wordFinder.buildOptionsList(["hello"]);
-  assert.equal(actual, '<li class="item">hello</li>', "buildOptionsList is returning an option tag with 1 word" );
+  var actual = wordFinder.buildOptionsList(["hello"], "hello");
+  assert.equal(actual, '<li class="item"><span>hello</span></li>', "buildOptionsList is returning an option tag with 1 word" );
 });
 
 QUnit.test( "test buildOptionsList function with two arguments", function( assert ) {
-  var actual = wordFinder.buildOptionsList(["hel", "lo"]);
-  assert.equal(actual, '<li class="item">hel</li><li class="item">lo</li>', "buildOptionsList is returning 2 option tags with 2 word" );
+  var actual = wordFinder.buildOptionsList(["hello", "hell"], "hel");
+  var expected = '<li class="item"><span>hel</span><span class="bold-letter">lo</span></li>' +
+                 '<li class="item"><span>hel</span><span class="bold-letter">l</span></li>';
+  assert.equal(actual, expected, "buildOptionsList is returning 2 option tags with 2 word" );
 });
 
 QUnit.test( "test buildOptionsList function with empty array", function( assert ) {
