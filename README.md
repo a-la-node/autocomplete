@@ -31,6 +31,10 @@ To practice node and writing back-end things.
 - Look at categorising words ie. trousers in Menswear
 
 ## Setup
+- To install npm dependencies:
+```
+npm i
+```
 - To run the server:
 ```
 npm run devStart
