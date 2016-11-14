@@ -7,7 +7,8 @@
     "start": "nodemon src/server.js",
     "test": "tape './src/test/**/*.js' | faucet",
     "devStart": "nodemon src/server.js",
-    "coverage": "./node_modules/.bin/istanbul cover src/test/*.js && istanbul report lcov && ./node_modules/.bin/codecov"
+    "coverage": "./node_modules/.bin/istanbul cover src/test/*.js && istanbul report lcov && codecov",
+    "codecov": "source config.env && ./node_modules/.bin/codecov -t $CODECOV_TOKEN"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/a-la-node/autocomplete#readme",
   "dependencies": {
+    "env2": "^2.1.1",
     "nodemon": "^1.11.0"
   },
   "devDependencies": {
